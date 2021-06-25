@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
 
     LoadScripts().then((result) => {
-        var node = document.createElement("react");
+        var node = document.createElement("div");
         node.setAttribute("id", "react");
         document.getElementsByTagName("body")[0].appendChild(node);
         ReactDOM.render(<Start />, document.getElementById("react"));
