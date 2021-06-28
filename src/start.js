@@ -5,7 +5,7 @@ import Loading from "src/partials/loading";
 
 const Routing = React.lazy(() => import("src/routing"));
 
-import "src/scss/body.scss";
+import './main.scss';
 
 const Start = (props) => {
     return (<Prepare />);
