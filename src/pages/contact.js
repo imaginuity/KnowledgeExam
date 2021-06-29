@@ -51,7 +51,7 @@ const Contact = () => {
               <div className="col-md-4">
                 <label htmlFor="inputState" className="form-label">State</label>
                 <select id="inputState" className="form-select">
-                  <option selected>Choose...</option>
+                  <option>Choose...</option>
                   <option>California</option>
                   <option>New York</option>
                   <option>Texas</option>
@@ -81,7 +81,7 @@ const Contact = () => {
           </div>
 
         </div>
-      </div>
+      </div>x
     </>
   );
 };
