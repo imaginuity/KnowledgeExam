@@ -18,7 +18,7 @@ const Start = (props) => {
             <Nav />
 
             <Switch>
-              <Route exact path="/posts/:id">
+              <Route path="/posts/:id">
                 <Post />
               </Route>
               <Route path="/posts">
