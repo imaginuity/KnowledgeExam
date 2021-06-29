@@ -55,7 +55,7 @@ const Home = () => {
                 <img src={postImage} alt="Lady with laptop" />
                 <div className="card-body">
                   <h4 className="card-title pt-3 text-capitalize">{post.title}</h4>
-                  <p className="card-text">
+                  <p className="card-text text-secondary">
                     {post.body}
                   </p>
                   <div className="d-flex justify-content-between align-items-center">
