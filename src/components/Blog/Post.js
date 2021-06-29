@@ -25,7 +25,7 @@ const Post = ({ match }) => {
   return (
     <>
       <div className="container py-4">
-        <div className="row">
+        <div className="row py-4">
           {post.map((post) => (
             <div className="col" key={post.id}>
               <Card className="card-body">
