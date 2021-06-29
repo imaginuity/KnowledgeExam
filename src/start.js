@@ -12,52 +12,51 @@ import "./scss/body.scss";
 import "../src/main.scss";
 
 const Start = (props) => {
-    return <Prepare />;
+  return <Prepare />;
 };
 
 const Prepare = (props) => {
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        setLoading(false);
-    }, []);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
-    if (loading) {
-        return <Loading type="loading-start" />;
-    } else {
-        return <Customizations />;
-    }
+  if (loading) {
+    return <Loading type="loading-start" />;
+  } else {
+    return <Customizations />;
+  }
 };
 
 const Customizations = (props) => {
-    return (
-        <Suspense fallback={<div />}>
-            <main>
-                <Helmet />
-                <Header/>
-                <Routing />
-                <Footer />
-
-            </main>
-        </Suspense>
-    );
+  return (
+    <Suspense fallback={<div />}>
+      <main>
+        <Helmet />
+        <Header />
+        <Routing />
+        <Footer />
+      </main>
+    </Suspense>
+  );
 };
 
 export default Start;
 
 document.addEventListener("DOMContentLoaded", (e) => {
-    const LoadScripts = () => {
-        return new Promise((resolve, reject) => {
-            window.onload = () => resolve(true);
-        });
-    };
+  const LoadScripts = () => {
+    return new Promise((resolve, reject) => {
+      window.onload = () => resolve(true);
+    });
+  };
 
-    LoadScripts()
-        .then((result) => {
-            let node = document.createElement("react");
-            node.setAttribute("id", "react");
-            document.getElementsByTagName("body")[0].appendChild(node);
-            ReactDOM.render(<Start />, document.getElementById("react"));
-        })
-        .catch((error) => console.log(error));
+  LoadScripts()
+    .then((result) => {
+      let node = document.createElement("react");
+      node.setAttribute("id", "react");
+      document.getElementsByTagName("body")[0].appendChild(node);
+      ReactDOM.render(<Start />, document.getElementById("react"));
+    })
+    .catch((error) => console.log(error));
 });

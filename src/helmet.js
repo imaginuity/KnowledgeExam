@@ -6,11 +6,11 @@ import { Helmet } from "react-helmet";
 // let entities = new Entities();
 
 const Start = ({ page }) => {
-    return (
-        <Helmet>
-            <title>Knowledge Exam</title>
-        </Helmet>
-    );
+  return (
+    <Helmet>
+      <title>Knowledge Exam</title>
+    </Helmet>
+  );
 };
 
 export default Start;

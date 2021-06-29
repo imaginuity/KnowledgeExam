@@ -1,14 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from "react";
 
 const Start = (props) => {
-    return (<LoadHeader />);
+  return <LoadHeader />;
 };
 
 const LoadHeader = (props) => {
-    return (
-        <>
-        </>
-    );
+  return <></>;
 };
 
 export default Start;
