@@ -6,7 +6,7 @@ const Blog = () => {
   return (
     <>
       <div className="container">
-        <h1 className="py-4">Posts</h1>
+        <h1 className="py-4 fw-light">Posts</h1>
         <div className="blog">
           <Posts />
         </div>
