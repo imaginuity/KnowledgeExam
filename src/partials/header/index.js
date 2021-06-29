@@ -6,9 +6,8 @@ const Start = (props) => {
 
 const LoadHeader = (props) => {
     return (
-        <div>
-            <div>Header</div>
-        </div>
+        <>
+        </>
     );
 };
 

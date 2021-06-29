@@ -1,59 +1,63 @@
 import ReactDOM from "react-dom";
 import React, { useContext, useState, useEffect, Suspense } from "react";
 
-import Loading from "src/partials/loading";
+import Loading from "../src/partials/loading";
+import Helmet from "src/helmet";
+import Header from "src/partials/header";
+import Footer from "src/partials/footer";
 
-const Routing = React.lazy(() => import("src/routing"));
+const Routing = React.lazy(() => import("./routing"));
 
-import './main.scss';
+import "./scss/body.scss";
+import "../src/main.scss";
 
 const Start = (props) => {
-    return (<Prepare />);
+    return <Prepare />;
 };
 
 const Prepare = (props) => {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setLoading(false);
-    }, [])
+    }, []);
 
     if (loading) {
-        return (<Loading type="loading-start" />);
+        return <Loading type="loading-start" />;
     } else {
-        return (<Customizations />);        
+        return <Customizations />;
     }
 };
 
 const Customizations = (props) => {
-    var StyleSheet = document.createElement('style');
-    var StylesString = `h1, h2, h3, h4, h5, h6 { font-family: 'verdana'; } `;
-    StyleSheet.innerHTML = StylesString;
-    document.getElementsByTagName('head')[0].appendChild(StyleSheet);
-
     return (
         <Suspense fallback={<div />}>
-            <Routing />
+            <main>
+                <Helmet />
+                <Header/>
+                <Routing />
+                <Footer />
+
+            </main>
         </Suspense>
     );
-    
 };
 
 export default Start;
 
 document.addEventListener("DOMContentLoaded", (e) => {
-
     const LoadScripts = () => {
         return new Promise((resolve, reject) => {
             window.onload = () => resolve(true);
         });
-    }
+    };
 
-    LoadScripts().then((result) => {
-        var node = document.createElement("react");
-        node.setAttribute("id", "react");
-        document.getElementsByTagName("body")[0].appendChild(node);
-        ReactDOM.render(<Start />, document.getElementById("react"));
-    }).catch(error => console.log(error));
-
+    LoadScripts()
+        .then((result) => {
+            let node = document.createElement("react");
+            node.setAttribute("id", "react");
+            document.getElementsByTagName("body")[0].appendChild(node);
+            ReactDOM.render(<Start />, document.getElementById("react"));
+        })
+        .catch((error) => console.log(error));
 });
