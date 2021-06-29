@@ -26,18 +26,6 @@ const FeaturedPost = ({ match }) => {
     <>
       <div className="container py-4">
         <div className="row py-4">
-          {post.map((post) => (
-            <div className="col" key={post.id}>
-              <Card className="card-body">
-                <img src={blogImage} className="card-img-top" alt={post.title} />
-                <h5 className="card-title pt-3 text-capitalize">{post.title} </h5>
-                <p className="card-text text-secondary">{post.body}</p>
-                <Link className="btn btn-dark" to="/">
-                  Back to Featured Posts
-                </Link>
-              </Card>
-            </div>
-          ))}
           <div className="col-3">
             <div className="p-4 mb-3 bg-light rounded">
               <h4 className="fst-italic">About</h4>
@@ -70,6 +58,19 @@ const FeaturedPost = ({ match }) => {
               </ol>
             </div>
           </div>
+
+          {post.map((post) => (
+            <div className="col" key={post.id}>
+              <Card className="card-body">
+                <img src={blogImage} className="card-img-top" alt={post.title} />
+                <h5 className="card-title pt-3 text-capitalize">{post.title} </h5>
+                <p className="card-text text-secondary">{post.body}</p>
+                <Link className="btn btn-dark" to="/">
+                  Back to Featured Posts
+                </Link>
+              </Card>
+            </div>
+          ))}
         </div>
       </div>
     </>
