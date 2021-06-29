@@ -6,7 +6,7 @@ import About from "./pages/about";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
 
-import Nav from "../src/components/UI/Nav";
+import Nav from "./components/UI/Nav";
 import Post from "./components/Blog/Post";
 
 const Start = (props) => {
