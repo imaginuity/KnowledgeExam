@@ -1,5 +1,7 @@
 import React from "react";
 
+import map from '../../public/media/map.png';
+
 const Contact = () => {
   return (
     <>
@@ -8,8 +10,14 @@ const Contact = () => {
 
         <div className="row">
           <div className="col border-end">
-            <h3>We'd love to hear from you!</h3>
-            <p>Why you should choose Pylot.</p>
+            <h4 className="px-3">Our Location</h4>
+            <img className="img-fluid rounded img-thumbnail" src={map} alt="Our Location in Dallas Texas" />
+            <p className="pt-3">
+              <span className="fw-bold">Email:</span> info@pylot.com<br />
+              <span className="fw-bold">Telephone:</span> +1.214.555.1212<br />
+              <span className="fw-bold">Address:</span> Dallas, TX USA
+            </p>
+            <p className="pt-2">Why you should choose Pylot.</p>
             <ul className="icon-list">
               <li>Always great news</li>
               <li>In-depth market analysis</li>
@@ -19,6 +27,7 @@ const Contact = () => {
           </div>
           <div className="col ps-4">
             <form className="row g-3">
+              <h3>We'd love to hear from you!</h3>
               <div className="col-md-6">
                 <label htmlFor="inputEmail4" className="form-label">Email</label>
                 <input type="email" className="form-control" id="inputEmail4" placeholder="Enter your email address" />

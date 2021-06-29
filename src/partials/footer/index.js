@@ -7,7 +7,7 @@ const Start = (props) => {
 const LoadFooter = (props) => {
   return (
     <>
-      <footer className="py-5 bg-dark bg-gradient text-white">
+      <footer className="py-5 bg-dark bg-gradient text-white fw-light fs-6">
         <div className="container">
           <p className="float-end mb-1">
             <a className="link-light text-decoration-none" href="#">Back to top</a>
