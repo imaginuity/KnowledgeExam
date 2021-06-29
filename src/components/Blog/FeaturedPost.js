@@ -4,9 +4,9 @@ import axios from 'axios';
 import Card from "src/components/UI/Card";
 
 
-const Post = ({ match }) => {
+const FeaturedPost = ({ match }) => {
   const [post, setPost] = useState([]);
-  const blogImage = "http://placeimg.com/640/360/any";
+  const blogImage = "https://source.unsplash.com/random/400x200";
   let { id } = useParams();
 
   useEffect(() => {
@@ -31,8 +31,8 @@ const Post = ({ match }) => {
               <img src={blogImage} className="card-img-top" alt={post.title} />
               <h5 className="card-title pt-3 text-capitalize">{post.title} </h5>
               <p className="card-text text-secondary">{post.body}</p>
-              <Link className="btn btn-dark" to="/posts">
-                Back to Posts
+              <Link className="btn btn-dark" to="/">
+                Back to Featured Posts
               </Link>
             </Card>
           </div>
@@ -41,4 +41,4 @@ const Post = ({ match }) => {
     </>
   );
 };
-export default Post;
+export default FeaturedPost;

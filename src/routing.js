@@ -8,6 +8,7 @@ import Contact from "./pages/contact";
 
 import Nav from "./components/UI/Nav";
 import Post from "./components/Blog/Post";
+import FeaturedPost from "./components/Blog/FeaturedPost";
 
 const Start = (props) => {
   return (
@@ -18,6 +19,9 @@ const Start = (props) => {
             <Nav />
 
             <Switch>
+              <Route path="/featured/:id">
+                <FeaturedPost />
+              </Route>
               <Route path="/posts/:id">
                 <Post />
               </Route>
