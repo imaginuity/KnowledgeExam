@@ -16,7 +16,7 @@ const Posts = (props) => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
-        // console.log(res);
+        console.log(res);
         setPosts(res.data);
       })
       .catch((err) => {
@@ -24,7 +24,7 @@ const Posts = (props) => {
       });
   };
   return (
-    <div>
+    <>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {posts.map((post) => (
           <div className="col" key={post.id}>
@@ -42,7 +42,7 @@ const Posts = (props) => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 export default Posts;
