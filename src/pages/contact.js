@@ -9,7 +9,7 @@ const Contact = () => {
         <h1 className="py-4 fw-light">Get in Touch</h1>
 
         <div className="row">
-          <div className="col border-end">
+          <div className="col pe-4 border-end">
             <h4 className="px-3">Our Location</h4>
             <img className="img-fluid rounded img-thumbnail" src={map} alt="Our Location in Dallas Texas" />
             <p className="pt-3">
