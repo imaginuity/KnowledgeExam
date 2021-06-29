@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import React, { useContext, useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 
 import Loading from "../src/partials/loading";
 import Helmet from "src/helmet";
