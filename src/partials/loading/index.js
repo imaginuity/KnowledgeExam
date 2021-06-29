@@ -28,8 +28,8 @@ const Start = (props) => {
 
 const LoadingStart = () => {
     return (
-        <div id="loading" class="loading-start">
-            <div class="loader quantum-spinner"></div>
+        <div id="loading" className="loading-start">
+            <div className="loader quantum-spinner"></div>
         </div>
     );
 };
@@ -38,16 +38,16 @@ const LoadingStart = () => {
 
 const LoadingPage = () => {
     return (
-        <div id="loading" class="loading-page">
-            <div class="title">PYLOT</div>
+        <div id="loading" className="loading-page">
+            <div className="title">PYLOT</div>
         </div>
     );
 };
 
 const LoadingText = (props) => {
     return (
-        <div id="loading" class="loading-text">
-            <div class="title">{props.text}</div>
+        <div id="loading" className="loading-text">
+            <div className="title">{props.text}</div>
         </div>
     );
 };
@@ -55,7 +55,7 @@ const LoadingText = (props) => {
 
 const LoadingModule = () => {
     return (
-        <div id="loading" class="loading-module-page">
+        <div id="loading" className="loading-module-page">
             LOADING...
         </div>
     );
@@ -67,7 +67,7 @@ const Gradient = (props) => {
     };
 
     return (
-        <div id="loading" class="gradient" style={styles}>
+        <div id="loading" className="gradient" style={styles}>
             LOADING
         </div>
     );
@@ -79,7 +79,7 @@ const LoadingBlock = (props) => {
     };
 
     return (
-        <div id="loading" class="loading-block">
+        <div id="loading" className="loading-block">
             LOADING
         </div>
     );
